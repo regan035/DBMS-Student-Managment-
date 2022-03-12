@@ -56,7 +56,7 @@ INSERT INTO Student_Course_Info(Student_ID,Course_ID,Course_Start_Date,Course_En
 # SELECT * FROM Student_Course_Info;
 
 ## Inner Join will only display data with matched values.
-# In this example we use 2 inner join to connect 3 tables together and only display student names who registered classes witch class names and locations
+# In this example we use 2 inner join to connect 3 tables together and only display student names who registered classes with class names and locations
 SELECT 
 Student_Master.Student_Fname, 
 Student_Master.Student_Lname, 
@@ -83,11 +83,11 @@ FROM Student_Master
 LEFT JOIN Student_Course_Info
 ON Student_Master.Student_ID = Student_Course_Info.Student_ID;
 
-## Right Join will only display all record in course master (Right side ) 
-# and only matched record in student course record table(Left side)
-# In this example, we use a inner join to filter out only students that registered classes with class information first, 
-# then use RIGHT JOIN to display all class list and registration situation. 
-# We can see Math 101 have neither student register nor starting date and classroom location in record.
+## Right Join will display all records in course master (Right side ) 
+# and only matched record in student master record table(Left side)
+# In this example, we use a inner join to filter out the only students that registered classes with dates and locations, 
+# then use RIGHT JOIN to display all class names. 
+# We can see course Math 101 have neither student register nor starting date and classroom location in record.
 SELECT 
 Student_Master.Student_Fname, 
 Student_Master.Student_Lname, 
